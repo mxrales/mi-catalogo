@@ -1,0 +1,21 @@
+.vistas{
+    display: flex;
+    margin-left: 14px;
+}
+.boton-lista{
+    width: 100vh;
+    height: 80px;
+}
+.boton-catalogo{
+    width: 100vh;
+    height: 80px;
+}
+
+.boton-lista:hover{
+    background-color: black;
+    color: white;
+}
+.boton-catalogo:hover{
+    background-color: black;
+    color: white;
+}
