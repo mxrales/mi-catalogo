@@ -1,0 +1,27 @@
+<div *ngFor="let auto of autos">
+<div class="contenedor">
+     <img class="ojo"src="assets/img/eye.png" (click)="onSelect(auto, carrosModal)">
+     <div class="descripcionautos">{{auto.descripcion}}</div>
+</div>
+
+<ng-template #carrosModal let-modal>
+     <div class="modal-header">
+       <h4 class="modal-title" id="modal-basic-title">Detalles</h4>
+     </div>
+     <div class="modal-body">
+     <div>Marca: {{auto.marca}}</div>
+     <div>Modelo: {{auto.modelos}}</div>
+     <div>Submarca: {{auto.submarca}}</div>
+     <div>Descripcion: {{auto.descripcion}}</div>
+     <div>Fecha de Registro: {{auto.fecha_registro}}</div>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss()">Salir</button>
+     </div>
+</ng-template>    
+</div>
+
+
+
+
+
