@@ -1,0 +1,29 @@
+.table{
+    text-align: center;
+    width: 100%;   
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td{
+    border: solid 1px black;
+    padding: 0;
+}
+#main-container{
+    margin: 150px auto;
+    width: 1400px;
+}
+
+thead{
+    background-color: black;
+    color: white;
+    border-bottom: solid 2px black;
+    font-size: 1.3em;
+}
+tr:nth-child(even){
+    background-color: grey;
+}
+tr:hover{
+    background-color: #6A6A6A;
+    color: white;
+}

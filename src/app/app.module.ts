@@ -7,13 +7,18 @@ import { HeaderComponent } from './header/header.component';
 import { VistasComponent } from './vistas/vistas.component';
 import { ListComponent } from './list/list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TableComponent } from './table/table.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     VistasComponent,
-    ListComponent
+    ListComponent,
+    TableComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,10 @@
+.pagenotfound{
+    height: 700px;
+    width: 1000px;
+    display:block;
+    margin:auto;
+}
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}

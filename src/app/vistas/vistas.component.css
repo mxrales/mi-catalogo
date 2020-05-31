@@ -1,21 +1,32 @@
 .vistas{
     display: flex;
-    margin-left: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
 }
-.boton-lista{
+.lista{
+    text-align: center;
     width: 100vh;
-    height: 80px;
+    height: 50px;
+    color: black;
 }
-.boton-catalogo{
+.tabla{
+    text-align: center;
     width: 100vh;
-    height: 80px;
+    height: 50px;
+    color: black;
 }
-
-.boton-lista:hover{
+.list:default{
+    color: black;
+}
+.lista:hover{
     background-color: black;
     color: white;
 }
-.boton-catalogo:hover{
+.tabla:hover{
     background-color: black;
     color: white;
+}
+.activo{
+    background-color:#000000;
+    color:white;
 }
