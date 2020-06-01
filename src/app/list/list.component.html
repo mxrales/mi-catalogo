@@ -13,11 +13,11 @@
      <div>Modelo: {{auto.modelos}}</div>
      <div>Submarca: {{auto.submarca}}</div>
      <div>Descripcion: {{auto.descripcion}}</div>
-     <div>Fecha de Registro: {{auto.fecha_registro}}</div>
      </div>
      <div class="modal-footer">
        <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss()">Cerrar</button>
      </div>
+     <ngb-pagination class="pagination-tabla" [collectionSize]="autos.length" [(page)]="page" [pageSize]="pageSize"></ngb-pagination>  
 </ng-template>    
 </div>
 

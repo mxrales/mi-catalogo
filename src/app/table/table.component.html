@@ -2,23 +2,28 @@
 <table class="table">
     <thead>
     <tr>
+      <th scope="col">ID</th>
       <th scope="col">Marca</th>
       <th scope="col">Modelo</th>
       <th scope="col">Submarca</th>
       <th scope="col">Descripcion</th>
-      <th scope="col">Fecha de Registro</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let auto of autos">
+    <tr *ngFor="let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+      <th scope="row">{{ auto._id }}</th>
       <th scope="row">{{ auto.marca }}</th>
       <td>
         {{ auto.modelos }}
       </td>
       <td>{{ auto.submarca }}</td>
       <td>{{ auto.descripcion }}</td>
-      <td>{{ auto.fecha_registro }}</td>
+      <td><div class="icon far fa-trash-alt"></div></td>
+      <td><div class="icon far fa-edit"></div></td>
     </tr>
     </tbody>
   </table>
+  <ngb-pagination class="pagination-tabla" [collectionSize]="autos.length" [(page)]="page" [pageSize]="pageSize"></ngb-pagination>  
 </div>

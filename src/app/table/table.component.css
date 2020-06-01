@@ -10,8 +10,9 @@ th, td{
     padding: 0;
 }
 #main-container{
-    margin: 150px auto;
+    margin: 30px auto;
     width: 1400px;
+    
 }
 
 thead{
@@ -26,4 +27,13 @@ tr:nth-child(even){
 tr:hover{
     background-color: #6A6A6A;
     color: white;
+}
+.pagination-tabla{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.icon{
+    padding-left: 1px;
+}
+.icon:hover{
+    cursor: pointer;
 }
