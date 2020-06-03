@@ -1,5 +1,8 @@
+<div id="contenedor-agregar">
+  <button type="button" class="btn btn-outline-dark" (click)="openModalAgregar()">Agregar +</button>
+ </div>
 <div id="main-container">
-<table class="table">
+  <table class="table">
     <thead>
     <tr>
       <th scope="col">ID</th>
@@ -20,8 +23,8 @@
       </td>
       <td>{{ auto.submarca }}</td>
       <td>{{ auto.descripcion }}</td>
-      <td><div class="icon far fa-trash-alt"></div></td>
-      <td><div class="icon far fa-edit"></div></td>
+      <td (click)="openModalConfirmarEliminar(auto)"><div class="icon far fa-trash-alt"></div></td>
+      <td (click)="openModalEditar(auto)"><div class="icon far fa-edit"></div></td>
     </tr>
     </tbody>
   </table>

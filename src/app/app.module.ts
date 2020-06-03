@@ -10,6 +10,9 @@ import { ListComponent } from './list/list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TableComponent } from './table/table.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ModalAddUpdateComponent } from './modals/modal-add-update/modal-add-update.component';
+import { FormsModule } from '@angular/forms';
+import { ModalConfirmarEliminarComponent } from './modals/modal-confirmar-eliminar/modal-confirmar-eliminar.component';
 
 
 
@@ -20,15 +23,19 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     VistasComponent,
     ListComponent,
     TableComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    ModalAddUpdateComponent,
+    ModalConfirmarEliminarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalAddUpdateComponent]
 })
 export class AppModule { }

@@ -37,3 +37,17 @@ tr:hover{
 .icon:hover{
     cursor: pointer;
 }
+#contenedor-agregar{
+    margin: 10px auto;
+    margin-left: 370px;
+}
+.btn:hover{
+    color: white;
+    background-color: darkslategray;
+    cursor: pointer;
+}
+.btn{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}

@@ -2,8 +2,8 @@
 <div class="contenedor">
      <img class="ojo"src="assets/img/eye.png" (click)="onSelect(auto, carrosModal)">
      <div class="descripcionautos">{{auto.descripcion}}</div>
-</div>
 
+</div>
 <ng-template #carrosModal let-modal>
      <div class="modal-header">
        <h4 class="modal-title" id="modal-basic-title">Detalles</h4>
@@ -17,7 +17,7 @@
      <div class="modal-footer">
        <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss()">Cerrar</button>
      </div>
-     <ngb-pagination class="pagination-tabla" [collectionSize]="autos.length" [(page)]="page" [pageSize]="pageSize"></ngb-pagination>  
+      
 </ng-template>    
 </div>
 

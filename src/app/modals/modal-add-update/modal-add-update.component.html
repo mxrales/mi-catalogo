@@ -1,0 +1,57 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">{{accion}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cerrado')">
+  <span arian-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form #formAutos = "ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="marca">Marca</label>
+      <input type="text" class="form-control" id="marca" placeholder="Escribe la marca" minlength="4" [(ngModel)] = "auto.marca" name="marca" required
+      #marca="ngModel">
+    </div>      
+    <div [hidden]="marca.valid || marca.pristine" class="alert alert-danger">
+      La marca es requerida
+    </div>
+
+    <div class="form-group">
+      <label for="submarca">Submarca</label>
+      <input type="text" class="form-control" id="submarca" placeholder="Escribe la submarca" minlength="4" [(ngModel)] = "auto.submarca" name="submarca" required
+      #submarca="ngModel">
+    </div>
+    <div [hidden]="submarca.valid || submarca.pristine" class="alert alert-danger">
+      La submarca es requerida
+    </div>
+
+
+    <div class="form-group">
+      <label for="descripcion">Descripcion</label>
+      <input type="text" class="form-control" id="descripcion" placeholder="Escribe la descripcion" [(ngModel)] = "auto.descripcion" name="descripcion" 
+      #descripcion="ngModel">
+    </div>
+
+    <div [hidden]="descripcion.valid || descripcion.pristine" class="alert alert-danger">
+      La descripcion es requerida
+    </div>
+
+    <div class="form-group">
+    <label for="modelo">Modelos </label>
+    <input type="text" class="form-control" id="modelos"[(ngModel)]="auto.modelos" name="modelos" min="2000" max="2020">
+      
+    <div class="rangos">
+      <div class="texto-rango">Desde</div>  
+      <input #desde name="min" type="range" min="2000" max="2020" (input)="modeloMin(desde.value)" value="2000">
+        <br>{{min}}
+        <br>
+        <div class="texto-rango">Hasta</div>
+        <input #hasta name="max" type="range" min="2000" max="2020"  (input)="modeloMax(hasta.value)" value="2020">
+        <br>{{max}}
+    </div>
+    </div>
+      
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-outline-dark" [disabled]="!formAutos.form.valid">Guardar</button>
+    </div>
+ </form>
+</div>
